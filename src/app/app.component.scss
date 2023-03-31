@@ -1,0 +1,131 @@
+.container{
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  button{
+    background-color: rgb(186, 15, 15);
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(170, 3, 3);
+    }
+    &[disabled]{
+      background-color: rgb(135, 2, 2);
+      cursor: auto;
+    }
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .text{
+    margin-left: 10px;
+  }
+  box-shadow: 7px 7px 10px black;
+
+}
+.box{
+  height: 200px;
+  overflow: auto;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+.products--grid{
+ display: flex;
+ flex-direction: column;
+  div{
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
+    h2,p{
+      margin: 0;
+    }
+  }
+}
+.message-error{
+  background-color: rgb(186, 15, 15);
+  color: #fff;
+  opacity: 0;
+  transition: all linear .5s;
+  &.invalid{
+    opacity: 1;
+  }
+}
+.line-error{
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid {
+    border-color: red;
+  }
+  &.valid{
+    border-color: green;
+  }
+}
+.styles{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.form{
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: 25%;
+  background: #fff;
+  color: #333;
+  p{
+    position: relative;
+    left: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+  }
+  .valid{
+    opacity: 0;
+  }
+  .invalid{
+    opacity: 1;
+    background-color: rgb(193, 4, 4);
+    color: #fff;
+
+
+  }
+  input{
+    border: 1px solid;
+    border-radius: 1px;
+  }
+  .Inputvalid{
+    border-color: green;
+  }
+  .Inputinvalid{
+    border-color: rgb(186, 15, 15);
+  }
+}
+
+
+
+@media screen and (min-width:40em){
+  .products--grid{
+    .products--grid{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 15px;
+    }
+  }
+}
+@media screen and (min-width:62em) {
+  .products--grid{
+    grid-template-columns: repeat(5,1fr);
+  }
+}
